@@ -3,53 +3,50 @@ import station_list # импортируем список станций
 # print (station_list.blue_line) -- печатаем список синей ветки
 
 def main():
-    print(f"First station info:{firstStationid()}")
-    print(f"Second station info:{secondStationid()}")
+    first_question = input("Введите первую станцию")
+    second_question = input("Введите вторую станцию")
+    first_station_id(first_question)
+    second_station_id(second_question)
 #    result = firstStationid()
 #    print (result[1])
 #    firstStation = firstStationid()
 
-def firstStationid(): # функция запрашивает название первой станции и выдает ее нумерацию 
+def first_station_id(first_station): # функция запрашивает название первой станции и выдает ее нумерацию 
     while True:
-        station = input("Введите первую станцию")
-        if station in station_list.blue_line:
-            id = station_list.blue_line.index(station) + 1  
+#        station = input("Введите первую станцию")
+        if first_station in station_list.blue_line:
             line = "blue"
             break
-        elif station in station_list.green_line:
-            id = station_list.green_line.index(station) + 1  
+        elif first_station in station_list.green_line:
             line = "green"
             break            
-        elif station in station_list.red_line:
-            id = station_list.red_line.index(station) + 1  
+        elif first_station in station_list.red_line:
             line = "red"
             break
-        elif station == "stop":
+        elif first_station == "stop":
             break
         else:
-            print("Станция не найдена")
-    return id, line
+            return False
+    return line
     
-def secondStationid(): # функция запрашивает название второй станции и выдает ее нумерацию 
+def second_station_id(second_station): # функция запрашивает название второй станции и выдает ее нумерацию 
     while True:
-        station = input("Введите вторую станцию")
-        if station in station_list.blue_line:
-            id = station_list.blue_line.index(station) + 1  
+#        station = input("Введите вторую станцию")
+        if second_station in station_list.blue_line:
             line = "blue"
             break
-        elif station in station_list.green_line:
-            id = station_list.green_line.index(station) + 1  
+        elif second_station in station_list.green_line:
             line = "green"
             break            
-        elif station in station_list.red_line:
-            id = station_list.red_line.index(station) + 1  
+        elif second_station in station_list.red_line:
             line = "red"
             break
-        elif station == "stop":
+        elif second_station == "stop":
             break
         else:
-            print("Станция не найдена")
-    return id, line
+            return False        
+    return line
+
 if __name__ == "__main__":
     main()
 
