@@ -104,10 +104,8 @@ def blue_to_line(a, b, metro_graph): # функция запускается в 
             second_point = b[0]
             route = route_generator(first_point, "Площадь Льва Толстого", metro_graph)
             print(Back.BLUE + route + Style.RESET_ALL)
-            print()
             print(Back.WHITE + "Перейдите на станцию Дворец Спорта" + Style.RESET_ALL)
             route = route_generator("Дворец Спорта", second_point, metro_graph)
-            print()
             print(Back.GREEN + route + Style.RESET_ALL)
             break
         elif b[1] == "red":
@@ -115,10 +113,8 @@ def blue_to_line(a, b, metro_graph): # функция запускается в 
             second_point = b[0]
             route = route_generator(first_point, "Майдан Независимости", metro_graph)
             print(Back.BLUE + route + Style.RESET_ALL)
-            print()
             print(Back.WHITE + "Перейдите на станцию Крещатик" + Style.RESET_ALL)
             route = route_generator("Крещатик", second_point, metro_graph)
-            print()
             print(Back.RED + route + Style.RESET_ALL)
             break
 
@@ -130,10 +126,8 @@ def red_to_line(a, b, metro_graph): # функция запускается в �
             second_point = b[0]
             route = route_generator(first_point, "Театральная", metro_graph)
             print(Back.RED + route + Style.RESET_ALL)
-            print()
             print(Back.WHITE + "Перейдите на станцию Золотые Ворота" + Style.RESET_ALL)
             route = route_generator("Золотые Ворота", second_point, metro_graph)
-            print()
             print(Back.GREEN + route + Style.RESET_ALL)
             break
         elif b[1] == "blue":
@@ -141,10 +135,8 @@ def red_to_line(a, b, metro_graph): # функция запускается в �
             second_point = b[0]
             route = route_generator(first_point, "Крещатик", metro_graph)
             print(Back.RED + route + Style.RESET_ALL)
-            print()
             print(Back.WHITE + "Перейдите на станцию Майдан Независимости" + Style.RESET_ALL)
             route = route_generator("Майдан Независимости", second_point, metro_graph)
-            print()
             print(Back.BLUE + route + Style.RESET_ALL)
             break
 
