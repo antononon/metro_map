@@ -1,6 +1,5 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-
 import station_graph
 
 metro_graph = nx.Graph()
